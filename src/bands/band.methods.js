@@ -51,7 +51,8 @@ exports.badCommand = () => {
   console.clear();
   console.log("\nbad command!");
   console.log("\noptions are:")
-  console.log("add - to add a film")
-  console.log("list- to list contents of database")
-  console.log('delete - to remove a band from database')
+  console.log("[add] - to add a film")
+  console.log("[list]- to list contents of database")
+  console.log('[delete] - to remove a band from database')
+  console.log('[change-like] - to change the like setting')
 }
