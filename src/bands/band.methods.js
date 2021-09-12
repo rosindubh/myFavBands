@@ -22,3 +22,11 @@ exports.listBands = async () => {
         console.log(`Error in listBands ${error}`)
     }
 }
+
+exports.badCommand = () => {
+  console.clear();
+  console.log("\nbad command!");
+  console.log("\noptions are:")
+  console.log("add - to add a film")
+  console.log("list- to list contents of database")
+}
