@@ -16,6 +16,12 @@ exports.addBand = async (newBand) => {
   }
 };
 
+exports.updateLike = async (updateObj) => {
+    console.clear();
+    await Band.updateOne({name :updateObj.name}, {$set:{like: updateObj.like}});
+    console.log(`${updateObj.name} like updated to ${updateObj.like}`)
+}
+
 exports.listBands = async () => {
     console.clear();
     try {
@@ -28,9 +34,14 @@ exports.listBands = async () => {
     }
 }
 
-exports.removeBand = async (bandName) => {
+exports.removeBand = async (band) => {
+    console.clear();
     try {
         console.log('running...');
+        console.log(band.name, "is being deleted")
+        await Band.findOneAndDelete(band)
+        console.log(band.name, 'was deleted from database')
+        console.log('closing connection...');
     } catch (error) {
         console.log(error)
     }

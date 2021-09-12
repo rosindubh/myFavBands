@@ -3,7 +3,7 @@
 require('./db/connection');
 
 const mongoose = require('mongoose');
-const {addBand, listBands, badCommand, removeBand} = require('./bands/band.methods');
+const {addBand, updateLike, listBands, badCommand, removeBand} = require('./bands/band.methods');
 const command = process.argv[2];
 
 const app = async () => {
@@ -21,6 +21,12 @@ const app = async () => {
     await removeBand({
       name: process.argv[3],
   })
+}
+  else if(command === 'change-like') {
+    await updateLike({
+      name: process.argv[3],
+      like: process.argv[4],
+})
 }
   else {
     badCommand()
