@@ -1,2 +1,2 @@
 # myFavBands
-practice with mongoose
+practice with mongoose - built on a raspberrypi
