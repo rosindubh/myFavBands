@@ -3,7 +3,7 @@
 require('./db/connection');
 
 const mongoose = require('mongoose');
-const {addBand, listBands, badCommand} = require('./bands/band.methods');
+const {addBand, listBands, badCommand, removeBand} = require('./bands/band.methods');
 const command = process.argv[2];
 
 const app = async () => {
@@ -17,6 +17,11 @@ const app = async () => {
   else if(command === 'list') {
     await listBands()
  }
+  else if(command === 'delete') {
+    await removeBand({
+      name: process.argv[3],
+  })
+}
   else {
     badCommand()
 }
