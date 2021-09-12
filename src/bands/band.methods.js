@@ -7,6 +7,10 @@ exports.addBand = async (newBand) => {
         const band = new Band(newBand);
         await band.save()
     } catch (error) {
+      const list = await Band.find({})
+      console.clear();
+      console.log(list)
+      console.log('\n\n\nBand already in database or\n')
       console.log("3 arguments required\nband name\nyear formed\nlike (this can be good or bad)\n");
       console.log('Example >>> node src/app.js "The Band" 1997 good\n')
   }
