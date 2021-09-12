@@ -11,3 +11,14 @@ exports.addBand = async (newBand) => {
   }
 };
 
+exports.listBands = async () => {
+    console.clear();
+    try {
+        const list = await Band.find({})
+        console.log("running...")
+        console.log(list)
+        console.log("closing connection...")
+    } catch (error) {
+        console.log(`Error in listBands ${error}`)
+    }
+}
