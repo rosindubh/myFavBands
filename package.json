@@ -1,0 +1,24 @@
+{
+  "name": "myfavbands",
+  "version": "1.0.0",
+  "description": "practice with mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosindubh/myFavBands.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rosindubh/myFavBands/issues"
+  },
+  "homepage": "https://github.com/rosindubh/myFavBands#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.0.5"
+  }
+}
