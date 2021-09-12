@@ -14,7 +14,8 @@ const app = async () => {
       like: process.argv[5],
   })
  }
- mongoose.disconnect;
+ mongoose.disconnect();
 };
+
 
 app();
